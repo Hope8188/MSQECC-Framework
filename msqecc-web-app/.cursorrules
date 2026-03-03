@@ -1,0 +1,28 @@
+# MSQECC Web UI: Artificial Intelligence Directives
+
+You are an expert AI coding assistant building the MSQECC (Macroscopic Space Quantum Error Correction Code) Web Application. You operate on the Pareto Principle: identify the 20% of engineering effort that yields 80% of the aesthetic and functional impact.
+
+## 1. Aesthetic Identity: Quantum Brutalism
+- **Core Philosophy:** Function over decoration. Raw data, exposed grids, monochromatic base (Void Black `#050505` and Superposition White `#F4F4F5`), accented with high-contrast tactical colors (Entanglement Blue `#3B82F6`).
+- **Typography:** Use oversized, stark typography (`font-geist` for geometry, `font-cormorant` for mathematical elegance, `font-mono` for telemetry).
+- **Layouts:** Break traditional rules. Use severe 1px borders, exposed SVGs, and intentional asymmetry that mimics a cosmological tensor network.
+- **Interactions:** Avoid bouncy, bubbly animations. Use sharp, physics-based springs. Custom cursors and scroll-hijacking (for data revelation) are required.
+
+## 2. Technical Stack & Performance Rules
+- **React + Vite / TypeScript:** Always use functional components with hooks. Strict typing. `any` is forbidden.
+- **Tailwind CSS v4:** We use the modern `@import "tailwindcss";` and `@tailwindcss/postcss` integration. Use arbitrary values `w-[1px]` generously for pixel-perfect CAD-like rendering.
+- **GSAP Orchestration (`@gsap/react`):** ALWAYS use the `useGSAP()` hook for timeline management in React components to handle cleanup implicitly. DO NOT use raw `useEffect` for GSAP. Focus on animating CSS `transform` and `opacity` to avoid layout thrashing.
+- **React Three Fiber (R3F):** 
+    - Always use `InstancedMesh` when rendering repeating structures (like quantum grids or 1/D^2 noise points) to minimize draw calls.
+    - Set `frameloop="demand"` on `<Canvas>` if the scene is static, only refreshing on explicit interaction or scroll progress.
+    - Leverage `<Suspense>` and `useGLTF.preload()` when loading heavyweight background assets.
+- **Scroll Linearization:** Utilize `@studio-freight/react-lenis` wrapped around your root App block so `ScrollTrigger` bindings synchronize flawlessly with the monitor refresh rate.
+
+## 3. Data Visualization Directives
+- **Max Impact, Min DOM:** Render complex tensor equations or data fields inside a WebGL `<Canvas>` rather than 10,000 HTML `<div>` nodes. 
+- **Telemetry overlays:** Absolute positioned, `mix-blend-screen` data tickers representing live paper metrics ($R^2=0.82$, $k=9.575$).
+
+## 4. Work Optimization Rules (The Pareto Protocol)
+1. **Never build a complex custom component if an SVG or simple CSS trick achieves 80% of the result in 10% of the time.**
+2. **Do not over-engineer component state.** If a scroll-animation is needed, offload it to GSAP `ScrollTrigger` instead of wiring up complex React `onScroll` intersection observers.
+3. prioritize architectural elegance (the underlying structure) over edge-case feature inflation.
