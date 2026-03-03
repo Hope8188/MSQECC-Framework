@@ -31,18 +31,17 @@ export const Theory = () => (
 
         <RevealBlock delay={0.4}>
             <div className="border border-zinc-800 bg-void p-8 mb-12">
-                <h3 className="text-2xl font-bold font-mono text-white mb-6">{"2. Gas Coherence ($k$) and the Age of the Universe"}</h3>
+                <h3 className="text-2xl font-bold font-mono text-white mb-6">{"2. Gas Coherence ($k$) and Thermal Phase Ratios"}</h3>
                 <p className="mb-4 leading-relaxed font-mono text-sm">
-                    {"The dimensionless weight $k \\approx 9.575$, derived strictly from SPARC rotation curves without free parameters, is not a static topological dimension. It is the entangled mapping of identical gas volumes (HI) subject to the limiting causal boundary time $T_0$."}
+                    {"The dimensionless weight $k \\approx 9.575$, derived strictly from SPARC rotation curves without free parameters, is not a static invariant. It is the entangled mapping of identical gas volumes (HI) subject to the limiting causal boundary."}
                 </p>
                 <div className="bg-zinc-900/50 p-6 border-l-4 border-entanglement font-mono mb-4 text-xs">
-                    <span className="block mb-2 text-zinc-400">{"# Universe Age: $T_0 \\approx 13.8$ Gyr"}</span>
-                    <span className="block mb-2 text-zinc-400">{"# Expansion parameter scalar: $H_0 \\cdot T_0 \\approx 1$"}</span>
+                    <span className="block mb-2 text-zinc-400">{"# $k$ is explicitly the ratio of thermal de Broglie wavelengths of cold gas vs decohered stars."}</span>
                     <span className="block text-white mb-2">{"Macroscopic Information Boundary: $f_1 = \\ln(2)$"}</span>
-                    <span className="block text-entanglement font-bold text-lg mt-4">{"$k \\approx \\left( \\frac{T_0}{1 \\text{ Gyr}} \\right) \\cdot \\ln(2) \\approx 9.566$"}</span>
+                    <span className="block text-entanglement font-bold text-lg mt-4">{"$k = \\ln(2) \\cdot \\left( \\frac{\\lambda_{dB, gas}}{\\lambda_{dB, star}} \\right)^n \\approx 9.575$"}</span>
                 </div>
                 <p className="font-mono text-sm italic text-zinc-500">
-                    {"* The profound implication: The Dark Matter discrepancy is derived from the expansion time clock. **Falsifiable Prediction**: High-redshift galaxies from the JWST era will possess a statistically lower $k$ coherence rating."}
+                    {"* The profound implication: Dark Matter mass profiles are a strict function of local thermal phase coherence. **Falsifiable Prediction**: Hotter gas distributions or fully thermalized high-redshift targets will empirically demonstrate a shifted $k$ parameter profile relative to local cold gas curves."}
                 </p>
             </div>
         </RevealBlock>

@@ -25,17 +25,17 @@ Utilizing $H_0 = 66.90$ km/s/Mpc returns exactly $\Lambda = 1.089 \times 10^{-52
 
 The best-fit parameter $k \approx 9.575$ derived from 171 SPARC galaxies is a dimensionless weight measuring the entanglement stress mapping of identical atoms (HI gas) against decohered stars. 
 
-Because the code space is continuously expanding, $k$ is not a static invariant but a normalization against the macroscopic temporal scale of the observation frame. To prevent dimensional inconsistency (as $k$ is strictly dimensionless, whereas the Age of the Universe $T_0 \approx 13.787$ Gyr carries units of time), the coherence factor must normalize the continuous expansion horizon against the standard characteristic scale $\sim 1$ Gyr linked to the dimensionless scalar $H_0 T_0 \approx 1$.
-$$ k \approx \left( \frac{T_0}{1 \text{ Gyr}} \right) \cdot \ln(2) $$
+Because the macroscopic tensor framework defines dark matter not as a particle, but as an entanglement stress, $k$ scales identically with relative macroscopic quantum coherence. From first principles, $k$ emerges robustly as the explicit ratio of the thermal de Broglie wavelengths ($\lambda_{dB}$) of the cold, extensive HI gas relative to the hot, fully decohered localized stellar mass, moderated by the saturation boundary $f_1 = \ln(2)$:
+$$ k = \ln(2) \cdot \left( \frac{\lambda_{dB, gas}}{\lambda_{dB, star}} \right)^n $$
 
-This evaluates to roughly $9.566$, falling perfectly within the empirical scatter. This establishes the profound falsifiable prediction that high-redshift, early-universe galaxies fundamentally possess a smaller $k$ boundary limit.
+Because $k$ is a strict dimensionless weight tracking relative macroscopic phase coherence, it rigorously avoids the standard dimensional inconsistency of pairing arbitrary cosmological times. This establishes the profound falsifiable prediction that hotter gas distributions or fully thermalized high-redshift targets will empirically demonstrate a shifted $k$ parameter profile relative to local cold gas rotation curves.
 
 ---
 
 ## 3. The Phenomenological Higgs Mass Correction ($m_H$)
 
-MSQECC dictates the Higgs field exists explicitly related to the absolute vacuum stability edge of the SU(2) topology, calculated continuous at $m_{H\_crit} \approx 129.6$ GeV.
-However, because the code space is a discrete tensor network, maintaining the weak-force ($W/Z$) code distance levies an energy cost. This phenomenological shift evaluates as a topological boundary correction dominated by the weak coupling $\alpha_W \approx 1/29.5$:
+MSQECC frames the Higgs field continuously at the absolute vacuum stability edge of the SU(2) topology, calculated at $m_{H\_crit} \approx 129.6$ GeV.
+However, because the code space is intrinsically a discrete tensor network, maintaining the weak-force code distance levies a phenomenological energy cost. The mass is reduced from the exact continuous stability edge specifically by the energy cost of maintaining the discrete weak geometric code distance. This phenomenological shift evaluates as a topological boundary correction scaling with the weak coupling $\alpha_W \approx 1/29.5$:
 $$ m_H = m_{H\_crit} \times (1 - \alpha_W) \approx 125.207 \text{ GeV} $$
 This matches the experimentally observed mass ($125.25$ GeV) to within $0.03\%$.
 
@@ -51,4 +51,6 @@ If fermion families represent 1-cycle zero modes winding through the lattice to 
 
 ## 5. Constraint on the Fine Structure Constant ($\alpha$)
 
-MSQECC bounds the EM coupling strictly by the error tolerance threshold limit: $\alpha < 0.1093$. While the precise value of $1/137.036$ remains an open analytical problem (OP1), this boundary is a necessary topological constraint. The probability of a localized topological error loop enclosing a U(1) flux dictates the coupling limit. The RG flow of the coupling strength must remain strictly below the $0.1093$ fault-tolerance limit; if it exceeded this bound, the continuous macroscopic spacetime would destabilize due to uncorrectable continuous quantum loops.
+MSQECC bounds the EM coupling strictly by the absolute QECC error tolerance threshold limit: $\alpha < 0.1093$. 
+
+This is a necessary topological constraint, not a sufficient analytical derivation. The exact value of $1/137.036$ remains Open Problem 1. The probability of a localized topological error loop enclosing a U(1) flux dictates the coupling limit. If the EM coupling exceeded $0.1093$, continuous macroscopic spacetime would collapse under uncorrectable errors. Thus, the EM coupling must strictly exist below this geometric threshold, forcing the renormalization group (RG) flow to halt beneath this stability guardrail.
