@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ReactLenis } from 'lenis/react';
 import { useStore } from '../store/msqeccStore';
 import { TopologyCanvas } from '../components/TopologyCanvas';
+import { CustomCursor } from '../components/CustomCursor';
 
 const GlitchLink = ({ to, children }: { to: string, children: string }) => {
     const triggerGlitch = useStore(state => state.triggerGlitch);
@@ -26,6 +27,7 @@ export const MainLayout = () => {
     return (
         <ReactLenis root>
             <div className="bg-void min-h-screen text-superposition font-geist dot-grid relative overflow-x-hidden selection:bg-entanglement/30 selection:text-entanglement">
+                <CustomCursor />
 
                 {/* Navigation - Sticky Terminal Header */}
                 <header className="fixed top-0 w-full border-b border-zinc-800/50 bg-void/80 backdrop-blur-md z-50">
