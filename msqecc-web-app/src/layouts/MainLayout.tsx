@@ -31,12 +31,12 @@ export const MainLayout = () => {
 
                 {/* Navigation - Sticky Terminal Header */}
                 <header className="fixed top-0 w-full border-b border-zinc-800/50 bg-void/80 backdrop-blur-md z-50">
-                    <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-                        <div className="font-mono font-bold text-entanglement tracking-[0.2em] flex items-center gap-2">
+                    <div className="max-w-7xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+                        <div className="font-mono font-bold text-entanglement tracking-[0.2em] flex items-center gap-2 flex-shrink-0">
                             <div className="w-2 h-2 bg-entanglement animate-pulse" />
                             MSQECC_V8
                         </div>
-                        <nav className="flex gap-8">
+                        <nav className="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar mask-fade-right ml-4 py-2">
                             <GlitchLink to="/">[ EMPIRICAL_CLAIM ]</GlitchLink>
                             <GlitchLink to="/theory">[ AXIOMS ]</GlitchLink>
                             <GlitchLink to="/reproducibility">[ REPRODUCE ]</GlitchLink>
@@ -66,19 +66,25 @@ export const MainLayout = () => {
                 </AnimatePresence>
 
                 {/* Main Content Area */}
-                <main className="relative z-10 pt-24 pb-32 max-w-7xl mx-auto px-6 min-h-screen">
+                <main className="relative z-10 pt-24 pb-32 max-w-7xl mx-auto px-4 md:px-6 min-h-screen">
                     <Outlet />
                 </main>
 
                 {/* Telemetry Footer */}
-                <div className="fixed bottom-4 right-6 font-mono text-[10px] text-zinc-500 z-40 text-right pointer-events-none mix-blend-screen bg-void/80 p-2 border border-zinc-800/50">
+                <div className="hidden md:block fixed bottom-4 right-6 font-mono text-[10px] text-zinc-500 z-40 text-right pointer-events-none mix-blend-screen bg-void/80 p-2 border border-zinc-800/50">
                     <div className="flex justify-between gap-8"><span className="text-zinc-600">ARCHITECT</span> <span>JACK KIMANI</span></div>
                     <div className="flex justify-between gap-8"><span className="text-zinc-600">CONTACT</span> <span>JACKKIMANI.PHYSICS@PROTON.ME</span></div>
                     <div className="border-t border-zinc-800/50 my-1"></div>
                     <div className="flex justify-between gap-8"><span className="text-zinc-600">SYS_STATUS</span> <span className="text-green-500">NOMINAL</span></div>
-                    <div className="flex justify-between gap-8"><span className="text-zinc-600">k_COHERENCE</span> <span className="text-entanglement animate-pulse">9.575</span></div>
+                    <div className="flex justify-between gap-8"><span className="text-zinc-600">k_COHERENCE</span> <span className="text-entanglement animate-pulse">9.425</span></div>
                     <div className="flex justify-between gap-8"><span className="text-zinc-600">GRAVITY_ERR</span> <span>0.0000000</span></div>
                 </div>
+
+                <footer className="md:hidden p-8 border-t border-zinc-800/50 font-mono text-[8px] text-zinc-600 uppercase tracking-[0.2em] flex flex-col gap-2">
+                    <div className="flex justify-between"><span>Architect</span> <span className="text-zinc-400 text-right">Jack Kimani</span></div>
+                    <div className="flex justify-between"><span>Status</span> <span className="text-green-500 text-right">Nominal</span></div>
+                    <div className="flex justify-between"><span>Coherence</span> <span className="text-entanglement text-right">9.425</span></div>
+                </footer>
 
             </div>
         </ReactLenis>

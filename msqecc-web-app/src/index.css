@@ -57,3 +57,17 @@
     filter: blur(0);
   }
 }
+
+/* Scrollbar hiding utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mask-fade-right {
+  mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}

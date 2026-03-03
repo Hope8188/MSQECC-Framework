@@ -68,9 +68,10 @@ export const AlphaFineStructure = () => {
                             </div>
                         )}
 
-                        {Math.abs(alpha - 1 / 137.036) < 0.001 && (
+                        {Math.abs(alpha - 1 / 137.0355) < 0.001 && (
                             <div className="mt-2 text-xs text-center text-white italic">
-                                {"Phenomenological fixed point bound $\\approx 1/137.036$"}
+                                <div>{"Topological Derivation:"}</div>
+                                <div className="text-entanglement">{"$4\\pi^3 + \\pi^2 + \\pi \\approx 137.0355$"}</div>
                             </div>
                         )}
                     </div>
