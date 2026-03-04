@@ -9,8 +9,8 @@ export default {
       colors: {
         void: "#050505",
         superposition: "#F4F4F5",
-        entanglement: "#3B82F6",
-        horizon: "#121214",
+        entanglement: "#00f3ff",
+        horizon: "#0a0a0c",
       },
       fontFamily: {
         geist: ['Inter', 'Helvetica Now', 'sans-serif'],

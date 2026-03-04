@@ -1,5 +1,0 @@
-Optimal Entropy Weight for Gas (k): 14.39
-Optimal Universal Constant (C): -0.0246
-Variance of C across galaxies: 0.0092
-Remaining Correlation (C vs Mass): 0.487
-Global R^2 for MSQECC V8: 0.2833

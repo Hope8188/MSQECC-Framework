@@ -1,2 +1,0 @@
-Refined MSQECC R^2: 0.2180
-MOND R^2: 0.9321

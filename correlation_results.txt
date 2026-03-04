@@ -1,2 +1,0 @@
-Pearson r (log Mb): -0.520
-Pearson r (f_gas): 0.336
