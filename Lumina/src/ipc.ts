@@ -34,9 +34,9 @@ function isTauri(): boolean {
 
 let mockUptime = 0;
 const MOCK_RESPONSES = [
-    "[ Lumina MSQECC Core :: Web Demo Mode ]\nThis is a browser preview. In the native desktop/mobile app, this response comes from the local Rust LLM engine running 100% offline.\n\nNo data was transmitted to any server.",
-    "[ Lumina MSQECC Core :: Sovereign Architecture ]\nThe full Lumina Symbiote operates on a Tauri v2 framework:\n• Rust backend: Zero-Trust IPC boundary\n• React frontend: Glassmorphism UI\n• llama.cpp: Local LLM inference (GBNF grammar-bounded)\n• SQLite: Syndrome vector storage\n\nAll computation happens on YOUR device. Zero cloud dependency.",
-    "[ Lumina MSQECC Core :: MSQECC Topology ]\nMSQECC (Multi-Scale Quantum Error Correction Code) applies the mathematics of black hole information theory to classical software:\n\n• O(N) attention scaling (vs O(N²) standard transformers)\n• Topological process scheduling (0ms perceived app launch)\n• Syndrome-based security (mathematical impossibility of data breach)\n• Overnight LoRA self-evolution (AI adapts to YOU over years)",
+    "[ Lumina Sovereign Core :: Demo Mode ]\nThis is a browser preview. In the native desktop/mobile app, this response comes from the local Rust LLM engine running 100% offline.\n\nNo data was transmitted to any server.",
+    "[ Lumina Sovereign Core :: Zenith Architecture ]\nThe full Lumina Symbiote operates on a Tauri v2 framework:\n• Rust backend: Zero-Trust IPC boundary\n• React frontend: Glassmorphism UI\n• llama.cpp: Local LLM inference (GBNF grammar-bounded)\n• SQLite: Syndrome vector storage\n\nAll computation happens on YOUR device. Zero cloud dependency.",
+    "[ Lumina Sovereign Core :: Horizon Topology ]\nLumina Horizon applies isomorphic execution isolated directly at Ring-0:\n\n• O(N) attention scaling (vs O(N²) standard transformers)\n• Topological process scheduling (0ms perceived app launch)\n• Syndrome-based security (mathematical impossibility of data breach)\n• Overnight LoRA self-evolution (AI adapts to YOU over years)",
 ];
 let responseIndex = 0;
 
