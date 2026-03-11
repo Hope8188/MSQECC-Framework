@@ -1,0 +1,12 @@
+[package]
+name = "lumina-vault"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "lumina_vault"
+path = "src/lib.rs"
+
+[dependencies]
+rusqlite = { version = "0.32", features = ["bundled"] }
+lumina-privacy = { path = "../lumina-privacy" }

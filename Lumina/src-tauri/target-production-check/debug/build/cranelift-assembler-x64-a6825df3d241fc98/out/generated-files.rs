@@ -1,0 +1,3 @@
+vec![
+  "C:\\Users\\HomePC\\Desktop\\New folder\\msqecc\\Lumina\\Lumina\\src-tauri\\target-production-check\\debug\\build\\cranelift-assembler-x64-a6825df3d241fc98\\out\\assembler.rs".into(),
+]

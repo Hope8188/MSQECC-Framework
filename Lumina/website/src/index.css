@@ -128,8 +128,37 @@
     }
 }
 
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.anim-spin-slow {
+    animation: spin-slow 12s linear infinite;
+    transform-origin: center;
+}
+
 .pulse-discovery {
     animation: discoveryPulse 2s infinite ease-in-out;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
 }
 
 /* Fix for disappearing words in navbar */

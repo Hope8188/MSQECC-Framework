@@ -1,8 +1,8 @@
 [package]
 name = "lumina"
 version = "0.1.0"
-description = "Lumina — The MSQECC OS Symbiote"
-authors = ["MSQECC Labs"]
+description = "Lumina Horizon — Sovereign OS Runtime"
+authors = ["Lumina Horizon Labs"]
 edition = "2021"
 
 [lib]
@@ -15,8 +15,38 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
+tauri-plugin-updater = "2"
+tauri-plugin-process = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }
+tokio = { version = "1", features = ["full"] }
 sysinfo = "0.33"
-chrono = "0.4"
+chrono = { version = "0.4", features = ["serde"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+enigo = "0.2"
+xcap = "0.0.12"
+rodio = "0.19"
+zeroize = "1"
+secrecy = "0.8"
+reqwest = { version = "0.12", features = ["json", "stream", "cookies"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+rand = "0.9"
+sha2 = "0.10"
+wasmtime = { version = "42.0.1", features = ["cranelift", "cache"] }
+arboard = "3.6.1"
+rdev = "0.5.3"
+open = "5.3.3"
+winreg = "0.55.0"
+tts = "0.26.3"
+tauri-plugin-autostart = "2.2.0"
+tauri-plugin-single-instance = "2.3.4"
+dirs = "6.0.0"
+futures-util = "0.3"
+scraper = "0.22"
+urlencoding = "2.1"
+pqcrypto-kyber = "0.8"
+pqcrypto-traits = "0.3"
+hex = "0.4"
+lumina-privacy = { path = "crates/lumina-privacy" }
+lumina-vault = { path = "crates/lumina-vault" }
+

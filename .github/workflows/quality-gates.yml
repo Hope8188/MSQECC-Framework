@@ -1,0 +1,146 @@
+name: Quality Gates
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hygiene:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: Lumina
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate required docs
+        shell: pwsh
+        run: |
+          $required = @(
+            "ULTIMATE_AUTONOMOUS_ENGINEER.md",
+            "docs/MasterProjectPlan.md",
+            "docs/system-knowledge-graph.json",
+            "docs/system-map.md",
+            "docs/technical-debt.md"
+          )
+          foreach ($file in $required) {
+            if (-not (Test-Path $file)) {
+              throw "Missing required file: $file"
+            }
+          }
+
+      - name: Fail on temporary diagnostics artifacts
+        shell: pwsh
+        run: |
+          $noise = @(
+            "build_log*.txt",
+            "build_production_log*.txt",
+            "build_err*.txt",
+            "error.txt",
+            "website/vite.config.ts.timestamp-*.mjs",
+            "src-tauri/*err*.txt",
+            "src-tauri/cargo_*log.txt"
+          )
+          $hits = @()
+          foreach ($pattern in $noise) {
+            $hits += Get-ChildItem -Path $pattern -ErrorAction SilentlyContinue
+          }
+          if ($hits.Count -gt 0) {
+            $hits | ForEach-Object { Write-Host "Noise artifact: $($_.FullName)" }
+            throw "Temporary diagnostics artifacts must not be committed."
+          }
+
+  desktop:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: Lumina
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: Lumina/package-lock.json
+
+      - name: Install desktop dependencies
+        run: npm ci
+
+      - name: Frontend tests
+        run: npm test
+
+      - name: TypeScript / frontend build
+        run: npm run build
+
+      - name: Desktop UI smoke test
+        run: npm run test:e2e
+
+      - name: Privacy crate tests
+        run: cargo test --manifest-path src-tauri/crates/lumina-privacy/Cargo.toml
+
+      - name: Vault crate tests
+        run: cargo test --manifest-path src-tauri/crates/lumina-vault/Cargo.toml
+
+      - name: Rust lib tests
+        run: cargo test --manifest-path src-tauri/Cargo.toml --lib
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-reports
+          path: |
+            Lumina/docs/**
+            Lumina/reports/**
+
+  desktop-package:
+    runs-on: windows-latest
+    needs:
+      - hygiene
+      - desktop
+    defaults:
+      run:
+        working-directory: Lumina
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: Lumina/package-lock.json
+
+      - name: Install desktop dependencies
+        run: npm ci
+
+      - name: Build Windows bundles
+        run: npm run tauri build
+
+      - name: Upload Windows bundles
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-bundles
+          path: |
+            Lumina/src-tauri/target/release/bundle/**/*.msi
+            Lumina/src-tauri/target/release/bundle/**/*.exe
+            Lumina/src-tauri/target/release/lumina.exe
+
+  website:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: Lumina/website
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: Lumina/website/package-lock.json
+
+      - name: Install website dependencies
+        run: npm ci
+
+      - name: Website build
+        run: npm run build

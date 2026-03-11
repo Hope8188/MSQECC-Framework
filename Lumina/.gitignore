@@ -22,3 +22,22 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local diagnostics and temporary build output
+build_log*.txt
+build_production_log*.txt
+build_err*.txt
+error.txt
+website/build_production_log*.txt
+src-tauri/cargo_*log.txt
+src-tauri/*err*.txt
+website/vite.config.ts.timestamp-*.mjs
+
+
+# Local Cargo test targets
+/target-tests/
+/target-tests-serial/
+
+
+/target-production-check/
+

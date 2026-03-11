@@ -1,52 +1,45 @@
-# Lumina — The MSQECC OS Symbiote
+# Lumina AI: Cognitive Operating System
 
-> *"MSQECC is not just how the universe builds galaxies; it is how we must build machines."*
-
-**Lumina** is an AI operating system symbiote built on the mathematical principles of the **Multi-Scale Quantum Error Correction Code (MSQECC)** framework. It runs 100% offline, achieves absolute privacy through topology-based security, and operates on hardware as old as a 10-year-old Huawei Y5.
+**Lumina AI** is a localized cognitive operating system built on MSQECC principles. It runs **100% offline**, maintains absolute data sovereignty, and targets deployment across all hardware tiers — from modern desktops to absolute edge environments.
 
 ## Core Architecture
 
 | Layer | Technology | Purpose |
 |---|---|---|
-| **Backend** | Rust + Tauri v2 | Zero-Trust OS interface, hardware polling, LLM bridge |
-| **Frontend** | React + TypeScript | Glassmorphism UI, real-time dashboard |
-| **AI Engine** | llama.cpp (MSQECC-quantized) | Local LLM inference with GBNF grammar bounds |
-| **Security** | MSQECC Syndrome Audits | Mathematical verification of all data integrity |
-| **Storage** | SQLite + Syndrome Vectors | Semantic file retrieval, temporal memory decay |
+| **Backend** | Rust + Tauri v2 | Hardware interface, process isolation, local LLM bridge |
+| **Frontend** | React 19 + TypeScript | High-performance UI for local task management |
+| **AI Engine** | Ollama + Qwen 2.5:7b | Local inference with isolated profile scaling |
+| **Security** | Process Quarantine | Mandatory isolation of all data streams |
+| **Storage** | SQLite | Persistent interaction memory and system state |
 
-## Quick Start
+## Functional Modules
 
-```bash
-# Install dependencies
-npm install
+| Module | Description |
+|---|---|
+| **Intelligence Hub** | Local chat interface with persistent memory |
+| **Task Swarm** | Goal-oriented task decomposition and reasoning |
+| **Session Identity** | Behavioral profile synchronization for local adaptation |
+| **App Container** | Sandboxed execution layer for local binaries |
+| **System Vitals** | Real-time hardware telemetry and resource monitoring |
+| **Workflow Logic** | Autonomous task tracking and execution visualization |
+| **Motor Cortex** | Native OS-level control (Search, Recent, Click, Type) |
+| **Settings** | Privacy configuration and local engine controls |
 
-# Development mode (launches Tauri + Vite)
-npm run tauri dev
+## Documentation
+The architectural specifications are located in `archive/` (files 11–29).
 
-# Production build
-npm run tauri build
+## Project Structure
+
 ```
-
-## Blueprint Documents (27 Pillars)
-
-The full architectural specification is documented across 27 master blueprints covering:
-- Dynamic security modes & Hegelian dialectics
-- Quantum-resistant cryptographic swarm architecture
-- MSQECC continuous calibration & mobile optimization
-- The Infinite Context Engine & P2P Hive Mind
-- Omnimodal Motor Cortex & Cross-Device Mesh
-- Auto-Evolution, Mega-Corp Integration, and the 1001 Applications
-- The Omega Class (x100,000 scaling) — Pre-Cognition, Planetary GPU, Digital Immortality
-- **LuminaOS** — The full operating system replacement
-
-## LuminaOS
-
-The ultimate form factor. A clean-sheet OS built on a hardened Linux micro-kernel with 100% Rust userspace. The AI is not a feature; it is the kernel's cognitive cortex.
-
-- **Supported Architectures:** x86_64, i686, aarch64, armv7, riscv64
-- **Market Strategy:** Free app on all platforms → Convert to LuminaOS → Enterprise dominance
-- **Marketplace:** 15% dev commission (vs 30% Apple/Google)
+Lumina/
+├── src/            ← Tauri frontend (React 19)
+├── src-tauri/      ← Rust backend (LuminaEngine)
+├── website/        ← Marketing gateway (React + Three.js)
+├── app_core/       ← App documentation (guidelines, tasks, research, resources)
+├── os_core/        ← OS-level documentation (future LuminaOS)
+└── archive/        ← 19 architectural blueprint documents
+```
 
 ## License
 
-Proprietary. All MSQECC mathematical engines are confidential.
+Proprietary. All architectural engines and mathematical frameworks are confidential.

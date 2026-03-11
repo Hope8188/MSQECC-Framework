@@ -1,0 +1,11 @@
+[package]
+name = "lumina-privacy"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "lumina_privacy"
+path = "src/lib.rs"
+
+[dependencies]
+regex-lite = "0.1"

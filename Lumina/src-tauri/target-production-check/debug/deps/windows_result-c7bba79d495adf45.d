@@ -1,0 +1,10 @@
+C:\Users\HomePC\Desktop\New folder\msqecc\Lumina\Lumina\src-tauri\target-production-check\debug\deps\windows_result-c7bba79d495adf45.d: C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\lib.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\bindings.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\com.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\strings.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\error.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\hresult.rs
+
+C:\Users\HomePC\Desktop\New folder\msqecc\Lumina\Lumina\src-tauri\target-production-check\debug\deps\libwindows_result-c7bba79d495adf45.rmeta: C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\lib.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\bindings.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\com.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\strings.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\error.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\hresult.rs
+
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\lib.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\bindings.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\com.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\strings.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\error.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-result-0.1.2\src\hresult.rs:

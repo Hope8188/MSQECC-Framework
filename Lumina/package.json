@@ -1,16 +1,20 @@
 {
-  "name": "tauri-app",
+  "name": "lumina-horizon",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "pwsh -ExecutionPolicy Bypass -File ./scripts/run-tauri.ps1",
+    "test": "vitest run --config vitest.config.mjs",
+    "test:e2e": "playwright test",
+    "bench:ollama": "pwsh -ExecutionPolicy Bypass -File ./scripts/benchmark-ollama.ps1"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-autostart": "^2.5.1",
     "@tauri-apps/plugin-opener": "^2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.5",
@@ -20,15 +24,18 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.2.1",
     "@tauri-apps/cli": "^2",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.27",
+    "jsdom": "^26.1.0",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
     "typescript": "~5.8.3",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vitest": "^3.2.4"
   }
 }

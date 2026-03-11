@@ -1,0 +1,5 @@
+=== MSQECC Version VIII Optimization ===
+Original V7 (k=1) Global R^2: 0.6598
+Optimized Gas Entropy Weight (k): 9.5750
+Optimized Universal Constant (C): 0.005281
+MSQECC V8 Global R^2: 0.8205

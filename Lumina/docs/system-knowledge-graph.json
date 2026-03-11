@@ -1,0 +1,194 @@
+{
+  "generatedAt": "2026-03-06T17:50:07+03:00",
+  "workspaceRoot": "C:\\Users\\HomePC\\Desktop\\New folder\\msqecc\\Lumina",
+  "gitRootObservation": "Git root resolves to the parent msqecc directory, so status includes sibling project changes outside this workspace.",
+  "languages": [
+    "TypeScript",
+    "TSX",
+    "Rust",
+    "Markdown",
+    "PowerShell"
+  ],
+  "modules": [
+    {
+      "id": "desktop-frontend",
+      "path": "src",
+      "type": "react-tauri-ui",
+      "entrypoints": [
+        "src/main.tsx",
+        "src/App.tsx"
+      ],
+      "dependsOn": [
+        "desktop-ipc",
+        "desktop-styles"
+      ]
+    },
+    {
+      "id": "desktop-ipc",
+      "path": "src/ipc.ts",
+      "type": "tauri-bridge",
+      "entrypoints": [
+        "getLuminaStatus",
+        "processQuery",
+        "toggleAirGap",
+        "executeWasmPlugin"
+      ],
+      "dependsOn": [
+        "backend-core"
+      ]
+    },
+    {
+      "id": "backend-core",
+      "path": "src-tauri/src/lib.rs",
+      "type": "rust-tauri-backend",
+      "entrypoints": [
+        "run",
+        "LuminaEngine::new",
+        "lumina_process_query",
+        "execute_wasm_plugin"
+      ],
+      "dependsOn": [
+        "sqlite-store",
+        "ollama-local",
+        "native-os-bridge",
+        "tauri-runtime"
+      ]
+    },
+    {
+      "id": "sqlite-store",
+      "path": "app_data_dir/lumina_memory.db",
+      "type": "local-persistence"
+    },
+    {
+      "id": "ollama-local",
+      "path": "http://127.0.0.1:11434/api/generate",
+      "type": "local-model-endpoint"
+    },
+    {
+      "id": "website",
+      "path": "website/src",
+      "type": "marketing-site",
+      "entrypoints": [
+        "website/src/main.tsx",
+        "website/src/App.tsx"
+      ]
+    },
+    {
+      "id": "product-docs",
+      "path": "app_core, os_core, archive",
+      "type": "reference-docs"
+    }
+  ],
+  "aiSurfaces": [
+    {
+      "name": "lumina_process_query",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "Local Ollama prompt construction, streaming response relay, memory persistence",
+      "timeoutSeconds": [
+        30,
+        90
+      ]
+    },
+    {
+      "name": "execute_swarm_recursion",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "Synthetic multi-step reasoning node generation"
+    },
+    {
+      "name": "push_imu_action",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "Intent prediction from buffered IMU-like input"
+    },
+    {
+      "name": "seal_event_horizon",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "Profile hashing and invariant sealing"
+    },
+    {
+      "name": "lumina_web_search",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "DuckDuckGo HTML scraping for search results"
+    },
+    {
+      "name": "execute_wasm_plugin",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "Sandboxed WebAssembly execution"
+    },
+    {
+      "name": "lumina_evolve_app",
+      "location": "src-tauri/src/lib.rs",
+      "purpose": "Self-modifying file replacement operation"
+    }
+  ],
+  "nativeCapabilities": [
+    "clipboard-read-write",
+    "tts",
+    "screen-capture",
+    "file-export",
+    "file-search",
+    "mouse-click-and-type",
+    "shell-open",
+    "autostart",
+    "updater",
+    "background-meta-key-listener"
+  ],
+  "dataflows": [
+    {
+      "from": "desktop-frontend",
+      "to": "desktop-ipc",
+      "kind": "function-call"
+    },
+    {
+      "from": "desktop-ipc",
+      "to": "backend-core",
+      "kind": "tauri-invoke"
+    },
+    {
+      "from": "backend-core",
+      "to": "sqlite-store",
+      "kind": "persist-memory-and-settings"
+    },
+    {
+      "from": "backend-core",
+      "to": "ollama-local",
+      "kind": "http-stream"
+    },
+    {
+      "from": "backend-core",
+      "to": "desktop-frontend",
+      "kind": "tauri-events"
+    }
+  ],
+  "windowsAppSurface": {
+    "framework": "Tauri v2 with React frontend",
+    "window": {
+      "transparent": true,
+      "decorations": false,
+      "resizable": true,
+      "size": [
+        1280,
+        850
+      ]
+    },
+    "bundleTargets": "all",
+    "securityCspIncludes": [
+      "http://127.0.0.1:11434",
+      "https://grainy-gradients.vercel.app",
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "testState": {
+    "frontendTests": 0,
+    "backendTests": 0,
+    "uiTests": 0,
+    "benchmarkHarness": false
+  },
+  "risks": [
+    "Oversized backend file increases regression risk and reduces testability.",
+    "Desktop UI is monolithic and mixes rendering with orchestration logic.",
+    "Local shell/file/edit capabilities require explicit policy and tests.",
+    "Offline product claims conflict with updater and web search network surfaces.",
+    "Workspace hygiene is degraded by temporary build logs and timestamp files."
+  ]
+}

@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
 
 :root {
-  /* Premium Horizon Palette (Apple / Samsung S26 Influence) */
-  --bg-primary: #050505;
+  /* Premium Horizon Palette */
+  --bg-primary: #030303;
   --bg-secondary: #0a0a0c;
   --bg-card: rgba(20, 20, 25, 0.4);
   --accent-cyan: #00f3ff;
@@ -27,8 +28,6 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    cursor: none;
-    /* Sovereign Cursor */
   }
 
   html,
@@ -37,8 +36,9 @@
     height: 100%;
     overflow: hidden;
     background: var(--bg-primary);
-    font-family: 'SF Pro Display', 'Inter', -apple-system, sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     color: var(--text-active);
+    cursor: default;
   }
 
   #root {
@@ -47,7 +47,7 @@
   }
 }
 
-/* ─── Premium Modernist Utils ─── */
+/* ─── Glassmorphism Panel ─── */
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: blur(40px) saturate(200%);
@@ -56,6 +56,7 @@
   box-shadow: 0 12px 64px -12px rgba(0, 0, 0, 1);
 }
 
+/* ─── Glimmer Hover Effect ─── */
 .glimmer-effect {
   position: relative;
   overflow: hidden;
@@ -81,20 +82,47 @@
 
 /* ─── Animations ─── */
 @keyframes spinSlow {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .animate-spin-slow {
   animation: spinSlow 20s linear infinite;
 }
 
-/* ─── Custom Scrollbar ─── */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-cyan), 0 0 16px var(--accent-cyan); }
+  50% { box-shadow: 0 0 16px var(--accent-cyan), 0 0 32px rgba(0, 243, 255, 0.4); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ─── Custom Scrollbar (the "custom-scrollbar" class) ─── */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── No Scrollbar ─── */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -104,7 +132,7 @@
   scrollbar-width: none;
 }
 
-/* ─── Drag Regions ─── */
+/* ─── Drag Regions (Tauri Frameless Window) ─── */
 .drag-region {
   -webkit-app-region: drag;
   app-region: drag;
@@ -114,3 +142,21 @@
   -webkit-app-region: no-drag;
   app-region: no-drag;
 }
+
+/* ─── Typography ─── */
+.font-prestige {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.05em;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+button,
+[role='button'] {
+  cursor: pointer;
+}
+
+
+

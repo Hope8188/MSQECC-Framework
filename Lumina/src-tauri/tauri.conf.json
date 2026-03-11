@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Lumina",
-  "version": "0.1.0",
-  "identifier": "com.horizon.lumina",
+  "productName": "Lumina AI",
+  "version": "1.0.0",
+  "identifier": "com.lumina.ai.core",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -12,9 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "Lumina Horizon",
-        "width": 420,
-        "height": 720,
+        "title": "Lumina AI - Cognitive Core",
+        "width": 1280,
+        "height": 850,
         "decorations": false,
         "transparent": true,
         "resizable": true,
@@ -22,7 +22,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'"
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self'; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:11434"
     }
   },
   "bundle": {
@@ -35,5 +35,16 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://raw.githubusercontent.com/Hope8188/MSQECC-Framework/main/Lumina/update.json"
+      ],
+      "pubkey": "dW51c2VkX3B1YmtleV9mb3Jfbm93X21zcWVjY19zeW5jX2JyaWRnZQ=="
+    },
+    "process": {},
+    "opener": {}
   }
 }

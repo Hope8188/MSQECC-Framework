@@ -1,0 +1,9 @@
+C:\Users\HomePC\Desktop\New folder\msqecc\Lumina\Lumina\src-tauri\target-production-check\debug\deps\wasmprinter-b6544df7b7057680.d: C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\lib.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\component.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\operand_stack.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\operator.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\print.rs
+
+C:\Users\HomePC\Desktop\New folder\msqecc\Lumina\Lumina\src-tauri\target-production-check\debug\deps\libwasmprinter-b6544df7b7057680.rmeta: C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\lib.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\component.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\operand_stack.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\operator.rs C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\print.rs
+
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\lib.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\component.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\operand_stack.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\operator.rs:
+C:\Users\HomePC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasmprinter-0.244.0\src\print.rs:
